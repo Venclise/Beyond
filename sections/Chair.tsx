@@ -39,7 +39,7 @@ const data =  await res.json()
 
   return (
     <div className='w-full h-max py-10'>
-      <div  className='w-full h-screen lg:h-[90vh] relative '>
+      <div  className='w-full h-[80vh] lg:h-[90vh] relative '>
       <Image src="/chair.jpg" alt="Bedroom" fill priority className='w-full h-full object-cover brightness-75'/>
       <div className='absolute bottom-0 w-full flex flex-col items-center justify-center p-5'> 
       <h1 className='text-white text-6xl  lg:text-8xl    font-light' >Chair </h1>

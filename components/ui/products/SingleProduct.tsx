@@ -178,7 +178,7 @@ opacity-50
         </h2>
 
         <div className="w-full flex  gap-2 ">
-          <Button className="bg-green-500 flex-1 py-6 flex items-center justify-center rounded-full">
+          <Button className="bg-green-500 flex-1 py-6  flex items-center justify-center rounded-full">
             <Link
               href={`https://wa.me/923015148830?text=Hi%20I%20want%20details%20about%20${encodeURIComponent(product.title)}`}
               target="_blank"
@@ -192,7 +192,7 @@ opacity-50
                 width={20}
                 priority
               />
-              <span>Whatsapp for price</span>
+              <span className="text-xs md:text-sm">Whatsapp for price</span>
             </Link>
           </Button>
 
@@ -201,7 +201,10 @@ opacity-50
               href="tel:+923015148830"
               className="w-full flex items-center gap-2 justify-center "
             >
-              <Phone /> Call for Price
+              <Phone />
+              <span className="text-xs md:text-sm">
+               Call for Price
+              </span>
             </a>
           </Button>
         </div>

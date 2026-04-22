@@ -28,11 +28,11 @@ export default function Category() {
       <Swiper
         modules={[A11y]}
         spaceBetween={10}
-        speed={600}
+        speed={200}
         pagination={{ clickable: true }}
         breakpoints={{
           0: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.1,
           },
           640: {
             slidesPerView: 2.1,
@@ -43,14 +43,15 @@ export default function Category() {
         }}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+        className=" h-[80vh] lg:h-screen "
       >
         {categories.map((item) => (
-          <SwiperSlide key={item.title} className="cursor-pointer">
+          <SwiperSlide key={item.title} className="cursor-pointer h-full">
             <div
               onClick={() => router.push(`/products/${item.Catslug}`)}
               className="
                 relative 
-                h-screen
+                h-full
               
                 
               "

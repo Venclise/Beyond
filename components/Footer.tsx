@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
 
                 <div className='flex flex-col gap-3 w-max'>
-               <h4 className='font-light'>Contact us</h4>
+               <h4 className=''>Contact us</h4>
                      <Link
   href="https://wa.me/923165575485?text=Hi%20I%20want%20to%20discuss%20a%20project"
   target="_blank"

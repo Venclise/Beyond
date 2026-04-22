@@ -35,7 +35,7 @@ export default function ProductCard({ data }: { data: ProductData }) {
   return (
     
     <div 
-          className="h-[25rem]   group  relative"
+          className="h-[23rem] lg:h-[25rem]   group  relative"
     >
 
     <Link

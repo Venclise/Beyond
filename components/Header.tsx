@@ -52,7 +52,7 @@ export default function Header() {
           <div className='lg:hidden flex'>
             <SideBar />
           </div>
-               <Link href="/products" className="">
+               <Link href="/products" className="lg:flex hidden">
           <Button className="bg-[#724234] cursor-pointer text-white transition-all py-5 rounded-full  w-full">
             <Sofa />
             Explore Products
