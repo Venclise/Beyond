@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeft, Image, Trash } from "lucide-react";
+import { ArrowLeft, Trash } from "lucide-react";
 
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -21,6 +21,7 @@ import { Textarea } from "../textarea";
 import { ToggleGroup, ToggleGroupItem } from "../toggle-group";
 import { categories } from "@/lib/contants";
 import { Spinner } from "../spinner";
+import Image from "next/image";
 
 export default function AddProduct() {
   const [selectedParent, setSelectedParent] = useState<string>("");
