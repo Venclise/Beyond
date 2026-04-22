@@ -45,15 +45,15 @@ export default function SingleProduct({ product }: { product: Product }) {
     <div className="w-full   h-max  flex    flex-col lg:flex-row lg:p-5  overflow-hidden">
       {product.image && (
         <div className="w-full  lg:w-[60%]  flex  flex-col lg:flex-row-reverse gap-1 ">
-          <div className="w-full h-[40rem] lg:w-[100%] lg:h-[45rem] relative overflow-hidden ">
+          <div className="w-full h-screen lg:w-[100%] lg:h-[45rem] relative overflow-hidden ">
             <Swiper
               className="w-full h-full"
               modules={[Navigation, Pagination]}
-              speed={700}
+              speed={250}
               spaceBetween={10}
               breakpoints={{
                 0: {
-                  slidesPerView: product.image.length === 1 ? 1 : 1.3 , 
+                  slidesPerView: product.image.length === 1 ? 1 : 1.1 , 
                 },
                 640: {
                   slidesPerView:  product.image.length === 1 ? 1 : 1.3 , 

@@ -7,7 +7,6 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
-
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
@@ -19,16 +18,15 @@ export default function Category() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="w-full px-2 py-10">
-
-<h1 className="text-4xl lg:text-4xl text-center py-5   ">
-    Shop by Rooms
-</h1>
+    <div className="w-full lg:p-10 p-1 py-10">
+      <h1 className="text-4xl lg:text-4xl  p-5 uppercase font-light   ">
+        Shop by Rooms
+      </h1>
 
       <Swiper
         modules={[A11y]}
         spaceBetween={10}
-        speed={200}
+        speed={250}
         pagination={{ clickable: true }}
         breakpoints={{
           0: {
@@ -43,7 +41,7 @@ export default function Category() {
         }}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-        className=" h-[80vh] lg:h-screen "
+        className=" h-[80vh] lg:h-screen  "
       >
         {categories.map((item) => (
           <SwiperSlide key={item.title} className="cursor-pointer h-full">
@@ -61,18 +59,15 @@ export default function Category() {
                   src={item.img}
                   alt={item.title}
                   fill
-                  className="object-cover brightness-75 "
+                  className="object-cover brightness-72 rounded-sm"
                   priority={false}
-                
                 />
               )}
 
-              
               <div className="absolute  transition" />
 
-              {/* Text */}
               <div className="absolute bottom-5 left-5 z-10">
-                <h1 className="text-white text-3xl md:text-3xl lg:text-4xl  capitalize">
+                <h1 className="text-white text-3xl lg:text-4xl capitalize">
                   {item.title}
                 </h1>
               </div>

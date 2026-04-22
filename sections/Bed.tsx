@@ -48,7 +48,7 @@ const data =  await res.json()
   </Link>
       </div>
       </div>
-<div className='lg:p-10 p-2 py-10 h-max flex items-center justify-center flex-col'>
+<div className='lg:p-10 p-1 py-10 h-max flex items-center justify-center flex-col'>
 
 
         
