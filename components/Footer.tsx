@@ -23,7 +23,7 @@ export default function Footer() {
                 <div className='flex flex-col gap-3 w-max'>
                <h4 className=''>Contact us</h4>
                      <Link
-  href="https://wa.me/923165575485?text=Hi%20I%20want%20to%20discuss%20a%20project"
+  href="https://wa.me/923015148830?text=Hi%20I%20want%20to%20discuss%20a%20something"
   target="_blank"
   rel="noopener noreferrer"
   className="text-sm underline flex items-center gap-2"
@@ -31,13 +31,14 @@ export default function Footer() {
   <MessageCircle  strokeWidth={1} size={15}/>
    Contact us on Whatsapp
     </Link>
-   <a href="mailto:Alinawaz300@gmail.comm"
+   <a href="mailto:Alinawaz300@gmail.com"
     className="text-sm underline flex items-center gap-2"
     
     >
     <Mail strokeWidth={1} size={15}/>
   Alinawaz300@gmail.com</a>
     <Link href="https://www.instagram.com/beyondinteriordesign0?igsh=cGlpOXpqZWRrbjl6" 
+  target="_blank"
        className="text-sm underline flex items-center gap-2"
        >
         <Image src="/insta.svg" alt="whatsapp" height={15} width={15} />

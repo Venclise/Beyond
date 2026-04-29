@@ -26,8 +26,7 @@ export const categories = [
     Catslug: "bedroom",
     img: "/bedroom.jpg",
     subCategories: [
-      { title: "Single Bed", slug: "single-bed" },
-      { title: "Double Bed", slug: "double-bed" },
+      { title: "Bed Sets", slug: "bed-sets" },
       { title: "Side Table", slug: "side-table" },
     ],
   },

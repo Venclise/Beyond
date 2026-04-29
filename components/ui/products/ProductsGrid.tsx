@@ -15,7 +15,9 @@ export default function ProductsGrid() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  // Get current sort value from URL
+  const baseUrl =
+process.env.NEXT_PUBLIC_SITE_URL 
+
   const currentSort = searchParams.get("sort") || "";
 
   const [products, setProducts] = useState<any[]>([]);
@@ -23,11 +25,10 @@ export default function ProductsGrid() {
   useEffect(() => {
     async function fetchProducts() {
       const params = new URLSearchParams();
-      
-      // If there is a sort in the URL, add it to the API call
+   
       if (currentSort) params.set("sort", currentSort);
 
-      const url = `/api/products${params.toString() ? `?${params.toString()}` : ""}`;
+      const url = `${baseUrl}/api/products${params.toString() ? `?${params.toString()}` : ""}`;
 
       try {
         const res = await fetch(url, { cache: "no-store" });
@@ -39,7 +40,7 @@ export default function ProductsGrid() {
     }
 
     fetchProducts();
-  }, [currentSort]); // Dependency on currentSort ensures refetch when URL changes
+  }, [currentSort]); 
 
   return (
     <div className="mt-12 p-2 lg:p-10">
@@ -51,7 +52,7 @@ export default function ProductsGrid() {
         <Select
           value={currentSort}
           onValueChange={(newValue) => {
-            // 1. Create a fresh params object from current URL
+
             const params = new URLSearchParams(searchParams.toString());
        
             if (newValue) {
@@ -60,7 +61,6 @@ export default function ProductsGrid() {
               params.delete("sort");
             }
 
-            // 3. Update the URL (this triggers the useEffect)
             router.push(`/products?${params.toString()}`);
           }}
         >

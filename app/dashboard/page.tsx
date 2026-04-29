@@ -2,9 +2,8 @@
 import ProductCard from "@/components/ui/products/ProductCard";
 import Link from "next/link";
 
-
 const baseUrl =
-process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+process.env.NEXT_PUBLIC_SITE_URL 
 
 export default async function page() {
   const res = await fetch(`${baseUrl}/api/products`, {
