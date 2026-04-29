@@ -78,6 +78,13 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${poppins.variable} h-full antialiased`}
     >
+      <head>
+          <meta
+          name="google-site-verification"
+          content="-Oz_5j5O5LeF-A-97S5g0XeQ_rsSD99dVg7QDAQ5z0Y-dd2eqoftHI"
+        />
+      </head>
+
       <body className="min-h-full flex flex-col">
         <main>
 <Header />

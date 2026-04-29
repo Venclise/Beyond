@@ -22,13 +22,13 @@ import { categories } from "@/lib/contants"
 
 export default function SideBar() {
   return (
-   <Sheet>
+   <Sheet >
   <SheetTrigger asChild>
     <Button size="icon-lg"  className="rounded-full" variant="ghost">
     <Menu />
     </Button>
   </SheetTrigger>
-  <SheetContent side="right" >
+  <SheetContent side="right" className="overflow-x-scroll">
     <SheetHeader>
       <SheetTitle>    
              <Link href="/" >
@@ -43,12 +43,10 @@ export default function SideBar() {
 
         </SheetTitle>
       <SheetDescription className="flex flex-col  items-start justify-between py-10 px-2 gap-8  ">
+        <Accordion type="single" collapsible defaultValue={`items-1`}  className='w-full border-0 bg-white flex flex-col gap-8 text-center rounded-md'>
   {
       categories.map(({Catslug,title,subCategories}) => (
-          
-        
-            <Accordion type="single" key={title} collapsible defaultValue={`item-${title}`} className='w-full bg-white text-center rounded-md'>
-  <AccordionItem value="item-1" className='w-full '>
+  <AccordionItem value={`item-${title}`} className='w-full '>
     <div className="flex items-center w-full justify-between ">
 <Link href={`/products/${Catslug}`} className="font-semibold text-black text-2xl">
 <SheetClose className="cursor-pointer hover:underline">
@@ -59,7 +57,6 @@ export default function SideBar() {
     </div>
     <AccordionContent className='flex flex-col items-start justify-start gap-4 p-5'>
        {subCategories.map(({title,slug}) => (
-         
          <Link
            href={`/products/${Catslug}/${slug}`}
          key={title}>
@@ -72,10 +69,10 @@ export default function SideBar() {
      
     </AccordionContent>
   </AccordionItem>
-</Accordion>
 
-    ))
+))
 }
+</Accordion>
 
 
   <div className="w-full flex flex-col gap-2 ">

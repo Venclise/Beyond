@@ -45,7 +45,7 @@ export const categories = [
     Catslug: "dining-room",
     img: "/DiningRoom.jpg",
     subCategories: [
-      { title: "table", slug: "table" },
+      { title: "Table", slug: "table" },
       { title: "Chair", slug: "chair" },
     ],
 },
