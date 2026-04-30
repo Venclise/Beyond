@@ -27,7 +27,7 @@ export default function Bed() {
 const [data,setData] = useState([])
   useEffect(() => {
     async function getProducts() {
-        const res = await fetch("/api/products?subcategory=double%20bed&limit=6&sort=newest",{cache:"no-store"})
+        const res = await fetch("/api/products?subcategory=bed%20sets&limit=6&sort=newest",{cache:"no-store"})
         if(!res.ok) {
           throw new Error("failed to fetch products")
         }
@@ -43,7 +43,7 @@ const data =  await res.json()
       <Image src="/Bed.jpg" alt="Bedroom" fill priority className='w-full h-full object-cover brightness-75'/>
       <div className='absolute bottom-0 w-full flex-col flex items-center justify-center p-5'> 
       <h1 className='text-white  text-6xl lg:text-8xl font-light' >Bed </h1>
-        <Link href="/products/bedroom/double-bed" className='underline text-white p-2'>
+        <Link href="/products/bedroom/bed-sets" className='underline text-white p-2'>
   View all
   </Link>
       </div>

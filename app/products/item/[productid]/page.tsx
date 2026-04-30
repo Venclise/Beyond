@@ -87,7 +87,7 @@ export default async function page({
   const product = await res.json();
 
   const recommendres = await fetch(
-    `${baseUrl}/api/products/related?category=${product.category}&productId=${product._id}`,
+    `${baseUrl}/api/products/related?category=${product.category}&productId=${product._id}&sort=newest&limit=6`,
   );
 
   if (!recommendres.ok) {
