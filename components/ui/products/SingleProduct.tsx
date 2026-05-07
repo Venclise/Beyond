@@ -76,7 +76,7 @@ export default function SingleProduct({ product }: { product: Product }) {
                 >
                   <Image
                     src={img}
-                    alt={img}
+              alt={`Luxury ${product.title} design in DHA Lahore`}
                     fill
                       sizes="100%"
                     loading="lazy"
