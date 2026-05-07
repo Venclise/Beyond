@@ -65,8 +65,12 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  
+  verification: {
+    google: "KAH2kSJkTYBrgC8ngiqNBHwjB4VZ2SqQGIgnpEBxD5Q"
+  },
 };
+
+
 
 export default function RootLayout({
   children,
@@ -79,10 +83,7 @@ export default function RootLayout({
       className={`${poppins.variable} ${poppins.variable} h-full antialiased`}
     >
       <head>
-          <meta
-          name="google-site-verification"
-          content="-Oz_5j5O5LeF-A-97S5g0XeQ_rsSD99dVg7QDAQ5z0Y"
-        />
+      
       </head>
 
       <body className="min-h-full flex flex-col">
