@@ -39,9 +39,8 @@ export default function ProductCard({ data }: { data: ProductData }) {
     >
 
     <Link
-      href={`${isDashboard ? "#" : `/products/item/${data._id}`}`}
+      href={`${isDashboard ? "#" : `/products/item/${data.title}`}`}
       className="h-full w-full "
-
     >
 
    

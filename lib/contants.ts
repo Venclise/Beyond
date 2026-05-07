@@ -1,20 +1,4 @@
-export const HeroSlides = [
-    {
-        id: 1,
-        title: "Explore Bed room",
-        img: "/bedroom.jpg"
-    },
-    {
-        id: 2,
-        title: "Explore Living Room",
-        img: "/living.jpg"
-    },
-    {
-        id: 3,
-        title: "Explore Kids room",
-        img: "/kids.jpg"
-    },
-]
+
 
 
 

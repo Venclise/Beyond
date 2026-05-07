@@ -2,7 +2,7 @@ import RecommendProducts from "@/components/ui/products/RecommendedProducts";
 import SingleProduct from "@/components/ui/products/SingleProduct";
 import type { Metadata, ResolvingMetadata } from "next";
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ;
 
 
 export async function generateMetadata(

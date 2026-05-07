@@ -41,7 +41,7 @@ export default function Category() {
         }}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-        className=" h-[80vh] lg:h-screen  "
+        className=" h-[80vh] lg:h-screen "
       >
         {categories.map((item) => (
           <SwiperSlide key={item.title} className="cursor-pointer h-full">
