@@ -20,7 +20,7 @@ export default function ProductCard({ data }: { data: ProductData }) {
   return (
     <div className="h-[23rem] lg:h-[25rem]   group  relative">
       <Link
-        href={`${isDashboard ? "#" : `/products/item/${data.title}`}`}
+        href={`${isDashboard ? "#" : `/products/item/${data._id}`}`}
         className="h-full w-full "
       >
         <div className="h-[90%] w-full relative overflow-hidden">
